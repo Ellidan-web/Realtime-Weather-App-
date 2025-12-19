@@ -40,6 +40,23 @@ It fetches live weather data from the **OpenWeatherMap API** and presents it wit
 - **Chart.js** (for hourly temperature visualization)
 
 ---
+## 🔑 API Key Setup (Required)
+
+This app uses the OpenWeatherMap API.
+
+### Step 1: Get an API Key
+
+Create a free account and generate an API key:
+👉 https://home.openweathermap.org/api_keys
+
+### Step 2: Add the API Key
+
+Open index.html and replace:
+```
+const API_KEY = "YOUR_API_KEY_HERE";
+```
+
+with your actual API key.
 
 ## 📦 Project Structure
 
