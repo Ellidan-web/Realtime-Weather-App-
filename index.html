@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Real-Time Weather App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="./assets/logo/weather_logo.png" type="image/png">
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="app">
+<div class="search">
+  <input id="cityInput" placeholder="Search city..." autocomplete="off">
+  <button onclick="getWeather()">Search</button>
+  <div class="suggestions" id="suggestions"></div>
+</div>
+
+  <div class="error" id="error">City not found</div>
+  <div class="loading" id="loading">Loading weather...</div>
+
+  <div class="card" id="card" style="display:none;">
+    <div class="current">
+      <div>
+        <div class="city" id="city"></div>
+        <div class="desc" id="desc"></div>
+        <div class="temp" id="temp"></div>
+      </div>
+      <img id="icon">
+    </div>
+
+    <div class="details">
+      <div>Feels Like<br><b id="feels"></b></div>
+      <div>Humidity<br><b id="humidity"></b></div>
+      <div>Wind<br><b id="wind"></b></div>
+    </div>
+
+    <div class="forecast" id="forecast"></div>
+
+    <div class="chart">
+      <canvas id="hourlyChart"></canvas>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+:root {
+  --glass: rgba(255,255,255,0.18);
+  --border: rgba(255,255,255,0.3);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#74ebd5,#9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: background 1s ease;
+}
+
+canvas#fx {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.app {
+  width: 95%;
+  max-width: 900px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.search input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px 0 0 14px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 14px 14px 0;
+  background: #111;
+  color: white;
+}
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  padding: 25px;
+  animation: fade 0.6s ease;
+}
+
+.loading, .error {
+  text-align: center;
+  display: none;
+  padding: 20px;
+}
+
+.current {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.city {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.temp {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.desc {
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.details div {
+  background: rgba(255,255,255,0.15);
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.forecast {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.day {
+  min-width: 120px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.day:hover {
+  transform: translateY(-6px);
+}
+
+.chart {
+  margin-top: 30px;
+}
+
+@keyframes fade {
+  from {opacity:0; transform:scale(0.96);}
+  to {opacity:1; transform:scale(1);}
+}
+
+@media(max-width:600px) {
+  .temp {font-size:56px;}
+  .details {grid-template-columns:1fr;}
+}
+
+.suggestions {
+  position: absolute;
+  background: rgba(0,0,0,0.85);
+  width: calc(100% - 90px);
+  margin-top: 55px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.suggestion {
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suggestion:hover {
+  background: rgba(255,255,255,0.15);
+}
