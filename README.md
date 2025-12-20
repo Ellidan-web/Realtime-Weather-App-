@@ -5,17 +5,17 @@ It fetches live weather data from the **OpenWeatherMap API** and presents it wit
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🌍 Core Features
-- 🔎 Search weather by city name
-- 📍 Auto-detect user location using Geolocation API
-- 🌡️ Current temperature and conditions
-- 🌬️ Wind speed, humidity, and “feels like” temperature
-- 📅 5-day weather forecast
-- ⏱️ Hourly temperature chart
+### Core Features
+- Search weather by city name
+- Auto-detect user location using Geolocation API
+- Current temperature and conditions
+- Wind speed, humidity, and “feels like” temperature
+- 5-day weather forecast
+- Hourly temperature chart
 
-### 🎨 UI & UX
+### UI & UX
 - Modern glassmorphism design
 - Smooth transitions and hover animations
 - Weather-based gradient backgrounds
@@ -23,7 +23,7 @@ It fetches live weather data from the **OpenWeatherMap API** and presents it wit
 - Responsive layout (mobile & desktop)
 - Readable typography with soft color palette
 
-### ⚡ Performance & Extras
+### Performance & Extras
 - Local caching with `localStorage`
 - Loading and error states
 - Day/Night visual adjustment
@@ -31,7 +31,7 @@ It fetches live weather data from the **OpenWeatherMap API** and presents it wit
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **HTML5**
 - **CSS3 (Glassmorphism & Animations)**
@@ -40,14 +40,14 @@ It fetches live weather data from the **OpenWeatherMap API** and presents it wit
 - **Chart.js** (for hourly temperature visualization)
 
 ---
-## 🔑 API Key Setup (Required)
+## API Key Setup (Required)
 
 This app uses the OpenWeatherMap API.
 
 ### Step 1: Get an API Key
 
 Create a free account and generate an API key:
-👉 https://home.openweathermap.org/api_keys
+https://home.openweathermap.org/api_keys
 
 ### Step 2: Add the API Key
 
@@ -58,7 +58,7 @@ const API_KEY = "YOUR_API_KEY_HERE";
 
 with your actual API key.
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 weather-app/
