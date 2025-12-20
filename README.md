@@ -1,4 +1,4 @@
-# 🌦️ Premium Real-Time Weather App
+# 🌦️Real-Time Weather App
 
 A modern, responsive, and feature-rich **real-time weather application** built using **HTML, CSS, and Vanilla JavaScript**.  
 It fetches live weather data from the **OpenWeatherMap API** and presents it with a clean, Apple-style UI, smooth animations, and interactive charts.
